@@ -10,37 +10,89 @@
 9        android:targetSdkVersion="29" />
 9-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml
 10
-11    <application
-11-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:5:5-19:19
-12        android:allowBackup="true"
-12-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/72b2b92ec4ab73ff21fb9bc348de3b22/core-1.0.1/AndroidManifest.xml:22:18-86
-14        android:debuggable="true"
-15        android:icon="@mipmap/ic_launcher"
-15-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:7:9-43
-16        android:label="@string/app_name"
-16-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:8:9-41
-17        android:roundIcon="@mipmap/ic_launcher_round"
-17-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:9:9-54
-18        android:supportsRtl="true"
-18-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:10:9-35
-19        android:theme="@style/AppTheme" >
-19-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:11:9-40
-20        <activity android:name="com.example.tabok.MainActivity" >
-20-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:12:9-18:20
-20-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:12:19-47
-21            <intent-filter>
-21-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:13:13-17:29
-22                <action android:name="android.intent.action.MAIN" />
-22-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:14:17-69
-22-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:14:25-66
-23
-24                <category android:name="android.intent.category.LAUNCHER" />
-24-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:16:17-77
-24-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:16:27-74
-25            </intent-filter>
-26        </activity>
-27    </application>
-28
-29</manifest>
+11    <uses-permission android:name="android.permission.CAMERA" />
+11-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:6:5-64
+11-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:6:22-62
+12
+13    <uses-feature android:name="android.hardware.camera2.CameraCaptureSession" />
+13-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:7:5-81
+13-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:7:19-79
+14
+15    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+15-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:8:5-80
+15-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:8:22-78
+16
+17    <application
+17-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:10:5-24:19
+18        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+18-->[androidx.core:core:1.1.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/c527b78844be871c44103f6f45a963fb/core-1.1.0/AndroidManifest.xml:24:18-86
+19        android:debuggable="true"
+20        android:icon="@mipmap/ic_launcher"
+20-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:11:9-43
+21        android:label="@string/app_name"
+21-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:12:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:13:9-54
+23        android:supportsRtl="true"
+23-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:14:9-35
+24        android:testOnly="true"
+25        android:theme="@style/AppTheme" >
+25-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:15:9-40
+26        <activity android:name="com.example.tabok.scanView" />
+26-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:16:9-55
+26-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:16:19-43
+27        <activity android:name="com.example.tabok.MainActivity" >
+27-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:17:9-23:20
+27-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:17:19-47
+28            <intent-filter>
+28-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:18:13-22:29
+29                <action android:name="android.intent.action.MAIN" />
+29-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:19:17-69
+29-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:19:25-66
+30
+31                <category android:name="android.intent.category.LAUNCHER" />
+31-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:21:17-77
+31-->/home/grafiters/AndroidStudioProjects/Tabok/app/src/main/AndroidManifest.xml:21:27-74
+32            </intent-filter>
+33        </activity>
+34        <activity
+34-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:23:9-27:75
+35            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+35-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:24:13-93
+36            android:excludeFromRecents="true"
+36-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:25:13-46
+37            android:exported="false"
+37-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:26:13-37
+38            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+38-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:27:13-72
+39        <!--
+40            Service handling Google Sign-In user revocation. For apps that do not integrate with
+41            Google Sign-In, this service will never be started.
+42        -->
+43        <service
+43-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:33:9-36:110
+44            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+44-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:34:13-89
+45            android:exported="true"
+45-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:35:13-36
+46            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION" />
+46-->[com.google.android.gms:play-services-auth:16.0.0] /home/grafiters/.gradle/caches/transforms-2/files-2.1/7f95d86bdaf264838981ba74d13a705a/jetified-play-services-auth-16.0.0/AndroidManifest.xml:36:13-107
+47
+48        <activity
+48-->[com.google.android.gms:play-services-base:15.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/4a64c013cc8d7e24feadec54a18d431d/jetified-play-services-base-15.0.1/AndroidManifest.xml:23:9-26:75
+49            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+49-->[com.google.android.gms:play-services-base:15.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/4a64c013cc8d7e24feadec54a18d431d/jetified-play-services-base-15.0.1/AndroidManifest.xml:24:13-79
+50            android:exported="false"
+50-->[com.google.android.gms:play-services-base:15.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/4a64c013cc8d7e24feadec54a18d431d/jetified-play-services-base-15.0.1/AndroidManifest.xml:25:13-37
+51            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+51-->[com.google.android.gms:play-services-base:15.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/4a64c013cc8d7e24feadec54a18d431d/jetified-play-services-base-15.0.1/AndroidManifest.xml:26:13-72
+52
+53        <meta-data
+53-->[com.google.android.gms:play-services-basement:15.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/abdc4573d44939c5c6ac1acdf138ef7e/jetified-play-services-basement-15.0.1/AndroidManifest.xml:23:9-25:69
+54            android:name="com.google.android.gms.version"
+54-->[com.google.android.gms:play-services-basement:15.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/abdc4573d44939c5c6ac1acdf138ef7e/jetified-play-services-basement-15.0.1/AndroidManifest.xml:24:13-58
+55            android:value="@integer/google_play_services_version" />
+55-->[com.google.android.gms:play-services-basement:15.0.1] /home/grafiters/.gradle/caches/transforms-2/files-2.1/abdc4573d44939c5c6ac1acdf138ef7e/jetified-play-services-basement-15.0.1/AndroidManifest.xml:25:13-66
+56    </application>
+57
+58</manifest>
