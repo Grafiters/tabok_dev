@@ -10,9 +10,8 @@
 
     <uses-permission android:name="android.permission.CAMERA" />
 
-    <uses-feature android:name="android.hardware.camera2.CameraCaptureSession" />
-
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-feature android:name="android.hardware.Camera" />
+    <uses-feature android:name="android.hardware.Camera.autofocus" />
 
     <application
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -23,7 +22,6 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.example.tabok.scanView" />
         <activity android:name="com.example.tabok.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

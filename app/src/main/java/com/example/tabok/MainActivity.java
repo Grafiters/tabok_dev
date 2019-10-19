@@ -2,31 +2,44 @@ package com.example.tabok;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+import com.google.zxing.Result;
 
-    public static TextView resultView;
-    Button scanBut;
+import org.w3c.dom.Text;
+
+import me.dm7.barcodescanner.zxing.ZXingScannerView;
+
+
+public class MainActivity extends AppCompatActivity implements ZXingScannerView.ResultHandler{
+
+    private ZXingScannerView mScannerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        generate();
+    }
 
-        resultView = (TextView)findViewById(R.id.result);
-        scanBut = (Button)findViewById(R.id.scan);
+    private void generate(){
+        mScannerView = new ZXingScannerView(this);
+        setContentView(mScannerView);
+        mScannerView.setResultHandler(this);
+        mScannerView.startCamera();
+    }
 
-        scanBut.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), scanView.class));
-            }
-        });
+    protected void onPause(){
+        super.onPause();
+        mScannerView.stopCamera();
+    }
 
+    @Override
+    public void handleResult(Result result) {
+        String text, format;
+        text = result.getText().toString();
+        format = result.getBarcodeFormat().toString();
+        Toast.makeText(getApplicationContext(), "Text : " + text + "\n" + "Format : "+format, Toast.LENGTH_LONG).show();
     }
 }
