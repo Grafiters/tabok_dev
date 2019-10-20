@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,29 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <me.dm7.barcodescanner.zxing.ZXingScannerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/scannerView"
+        android:layout_above="@id/layout_result"
+        android:layout_alignParentBottom="true"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/layout_result"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:background="@color/colorPrimaryDark">
 
+        <TextView
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="24sp"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"
+            android:text="..."/>
+    </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
